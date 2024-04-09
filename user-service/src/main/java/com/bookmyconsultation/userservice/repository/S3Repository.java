@@ -35,8 +35,8 @@ public class S3Repository {
     @PostConstruct
     public void init(){
         // Update the s3 admin access credentials here after creating it in the AWS console
-        String accessKey = "AKIA46QQ26U3WVBLN5JH"; // Configure before run
-        String secretKey = "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"; // Configure before run
+        String accessKey = ""; // Configure before run
+        String secretKey = ""; // Configure before run
         AWSCredentials credentials = new BasicAWSCredentials(accessKey,secretKey);
         s3Client = AmazonS3ClientBuilder
                 .standard()

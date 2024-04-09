@@ -20,9 +20,9 @@ public class EmailService {
     @PostConstruct
     public void init(){
         // When you hit the endpoint to verify the email this needs to be the ses access key for your AWS account
-        String accessKey = "AKIA46QQ26U3RLTLFRQD"; // Configure before run
+        String accessKey = ""; // Configure before run
         // When you hit the endpoint to verify the email this needs to be the ses secret key for your AWS account
-        String secretKey = "MJPxVsDLytkZgw6IgrFtb1o2mkdSqkMEXJFKLKtg"; // Configure before run
+        String secretKey = ""; // Configure before run
 
         //This is required for email verification
         StaticCredentialsProvider staticCredentialsProvider = StaticCredentialsProvider
