@@ -1,0 +1,292 @@
+2022-07-24 20:24:35.713  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on 6067fd23c20e with PID 1 (/app.jar started by root in /)
+2022-07-24 20:24:35.732  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 20:24:43.301  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 20:24:43.325  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-24 20:24:44.185  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.PrescriptionRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-07-24 20:24:44.282  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 911 ms. Found 2 JPA repository interfaces.
+2022-07-24 20:24:44.317  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 20:24:44.320  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-24 20:24:44.337  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AvailabilityRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 20:24:44.379  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AppointmentRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 20:24:44.386  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 MongoDB repository interfaces.
+2022-07-24 20:24:46.794  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b68415a3-d8e8-3f81-9eb3-9b40099ce61d
+2022-07-24 20:24:51.531  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-24 20:24:51.609  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 20:24:51.611  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 20:24:51.977  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 20:24:52.007  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 16015 ms
+2022-07-24 20:24:54.467  INFO 1 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.0"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "5.4.72-microsoft-standard-WSL2"}, "platform": "Java/Azul Systems, Inc./11.0.16+8-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7ec25216], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@79a1728c]}, clusterSettings={hosts=[ec2-3-232-57-4.compute-1.amazonaws.com:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@5a8ba37c], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-07-24 20:24:55.032  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:81}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 20:24:55.028  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:82}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 20:24:55.080  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ec2-3-232-57-4.compute-1.amazonaws.com:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=349919100}
+2022-07-24 20:24:56.902  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(beans|beans/.*|caches|caches/.*|health|health/.*|info|info/.*|conditions|conditions/.*|configprops|configprops/.*|env|env/.*|loggers|loggers/.*|heapdump|heapdump/.*|threaddump|threaddump/.*|prometheus|prometheus/.*|metrics|metrics/.*|scheduledtasks|scheduledtasks/.*|mappings|mappings/.*|refresh|refresh/.*|features|features/.*)"
+2022-07-24 20:24:58.276  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-24 20:24:59.301  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-24 20:25:01.401  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-24 20:25:02.115  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-24 20:25:06.445  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-24 20:25:06.687  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-24 20:25:09.889  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-24 20:25:09.921  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-24 20:25:12.150  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2022-07-24 20:25:12.162  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-24 20:25:12.532  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:kafkaTemplate with input parameters []
+2022-07-24 20:25:12.552  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:producerFactory with input parameters []
+2022-07-24 20:25:12.570  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:producerFactory with return value [org.springframework.kafka.core.DefaultKafkaProducerFactory@76a362a4] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:25:12.646  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:kafkaTemplate with return value [org.springframework.kafka.core.KafkaTemplate@ca7e37f] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:25:13.212  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with input parameters []
+2022-07-24 20:25:13.226  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with return value [org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@5ac044ef] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:25:13.432  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with input parameters []
+2022-07-24 20:25:13.504  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with return value [org.springframework.security.authentication.dao.DaoAuthenticationProvider@7282af25] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:25:13.995  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4c04216f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@987a0bb, org.springframework.security.web.context.SecurityContextPersistenceFilter@7f4e5a39, org.springframework.security.web.header.HeaderWriterFilter@3a4e524, org.springframework.security.web.authentication.logout.LogoutFilter@3ec9f8d, com.bookmyconsultation.appointmentservice.security.JWTAuthenticationFilter@1f949ab9, com.bookmyconsultation.appointmentservice.security.JWTTokenVerifier@5a7b6b75, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@ac4915e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d84b3a2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3719360c, org.springframework.security.web.session.SessionManagementFilter@2dac2e1b, org.springframework.security.web.access.ExceptionTranslationFilter@4df7d9ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2bdab835]
+2022-07-24 20:25:17.454  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-07-24 20:25:17.641  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-24 20:25:17.666  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 46.038 seconds (JVM running for 49.343)
+2022-07-24 20:25:27.284  INFO 1 --- [nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-24 20:25:27.285  INFO 1 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-24 20:25:27.290  INFO 1 --- [nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-24 20:57:50.993  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-24 20:57:51.020  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-24 20:57:53.335  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-24 21:10:34.206  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on 008eb2b8c640 with PID 1 (/app.jar started by root in /)
+2022-07-24 21:10:34.242  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 21:10:43.439  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 21:10:43.484  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-24 21:10:45.078  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.PrescriptionRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-07-24 21:10:45.227  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1671 ms. Found 2 JPA repository interfaces.
+2022-07-24 21:10:45.296  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 21:10:45.326  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-24 21:10:45.350  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AvailabilityRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 21:10:45.357  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AppointmentRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 21:10:45.406  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 70 ms. Found 1 MongoDB repository interfaces.
+2022-07-24 21:10:47.452  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b68415a3-d8e8-3f81-9eb3-9b40099ce61d
+2022-07-24 21:10:53.995  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-24 21:10:54.078  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 21:10:54.096  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 21:10:54.867  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 21:10:54.869  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 20152 ms
+2022-07-24 21:10:59.635  INFO 1 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.0"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "5.4.72-microsoft-standard-WSL2"}, "platform": "Java/Azul Systems, Inc./11.0.16+8-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@7ec25216], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@12db3386]}, clusterSettings={hosts=[ec2-3-232-57-4.compute-1.amazonaws.com:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@5a8ba37c], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-07-24 21:11:00.232  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:95}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 21:11:00.328  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ec2-3-232-57-4.compute-1.amazonaws.com:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=414442800}
+2022-07-24 21:11:00.224  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:94}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 21:11:06.439 ERROR 1 --- [           main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'tracingFilter' defined in class path resource [io/opentracing/contrib/spring/web/starter/ServerTracingAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracer' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracer' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reporter' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.jaegertracing.spi.Reporter]: Factory method 'reporter' threw exception; nested exception is java.lang.IllegalArgumentException: Could not parse url.
+2022-07-24 21:11:06.655  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-24 21:11:06.694  WARN 1 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [BufferPoolPruner-1-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:829)
+2022-07-24 21:11:06.703  WARN 1 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-ClusterId{value='62ddb562080e8e1018c41709', description='null'}-ec2-3-232-57-4.compute-1.amazonaws.com:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/java.net.SocketInputStream.socketRead0(Native Method)
+ java.base@11.0.16/java.net.SocketInputStream.socketRead(SocketInputStream.java:115)
+ java.base@11.0.16/java.net.SocketInputStream.read(SocketInputStream.java:168)
+ java.base@11.0.16/java.net.SocketInputStream.read(SocketInputStream.java:140)
+ com.mongodb.internal.connection.SocketStream.read(SocketStream.java:110)
+ com.mongodb.internal.connection.SocketStream.read(SocketStream.java:135)
+ com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:713)
+ com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:571)
+ com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:410)
+ com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:369)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+ com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:829)
+2022-07-24 21:11:06.716  WARN 1 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [cluster-rtt-ClusterId{value='62ddb562080e8e1018c41709', description='null'}-ec2-3-232-57-4.compute-1.amazonaws.com:27017] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/java.lang.Thread.sleep(Native Method)
+ com.mongodb.internal.connection.DefaultServerMonitor.waitForNext(DefaultServerMonitor.java:443)
+ com.mongodb.internal.connection.DefaultServerMonitor.access$1500(DefaultServerMonitor.java:64)
+ com.mongodb.internal.connection.DefaultServerMonitor$RoundTripTimeRunnable.run(DefaultServerMonitor.java:415)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:829)
+2022-07-24 21:11:06.719  WARN 1 --- [           main] o.a.c.loader.WebappClassLoaderBase       : The web application [ROOT] appears to have started a thread named [MaintenanceTimer-2-thread-1] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@11.0.16/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@11.0.16/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:234)
+ java.base@11.0.16/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:2123)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@11.0.16/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1054)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1114)
+ java.base@11.0.16/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+ java.base@11.0.16/java.lang.Thread.run(Thread.java:829)
+2022-07-24 21:11:06.762  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2022-07-24 21:11:06.891  INFO 1 --- [           main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-24 21:11:07.191 ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:165)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:577)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:734)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1295)
+	at com.bookmyconsultation.appointmentservice.AppointmentServiceApplication.main(AppointmentServiceApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
+	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
+	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:479)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:211)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:184)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	... 16 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracingFilter' defined in class path resource [io/opentracing/contrib/spring/web/starter/ServerTracingAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracingFilter' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracer' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracer' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reporter' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.jaegertracing.spi.Reporter]: Factory method 'reporter' threw exception; nested exception is java.lang.IllegalArgumentException: Could not parse url.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:203)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:262)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:236)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5219)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:835)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1396)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1386)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:140)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:919)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:263)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:432)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:927)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 21 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tracer' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Unsatisfied dependency expressed through method 'tracer' parameter 1; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reporter' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.jaegertracing.spi.Reporter]: Factory method 'reporter' threw exception; nested exception is java.lang.IllegalArgumentException: Could not parse url.
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 61 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'reporter' defined in class path resource [io/opentracing/contrib/java/spring/jaeger/starter/JaegerAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.jaegertracing.spi.Reporter]: Factory method 'reporter' threw exception; nested exception is java.lang.IllegalArgumentException: Could not parse url.
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791)
+	... 75 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [io.jaegertracing.spi.Reporter]: Factory method 'reporter' threw exception; nested exception is java.lang.IllegalArgumentException: Could not parse url.
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 89 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Could not parse url.
+	at io.jaegertracing.thrift.internal.senders.HttpSender.<init>(HttpSender.java:47)
+	at io.jaegertracing.thrift.internal.senders.HttpSender$Builder.build(HttpSender.java:126)
+	at io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration.getHttpReporter(JaegerAutoConfiguration.java:135)
+	at io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration.reporter(JaegerAutoConfiguration.java:93)
+	at io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$6691a405.CGLIB$reporter$3(<generated>)
+	at io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$6691a405$$FastClassBySpringCGLIB$$4cd727e7.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at io.opentracing.contrib.java.spring.jaeger.starter.JaegerAutoConfiguration$$EnhancerBySpringCGLIB$$6691a405.reporter(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 90 common frames omitted
+
+2022-07-24 21:13:48.775  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : Starting AppointmentServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on 9233fe9b1b75 with PID 1 (/app.jar started by root in /)
+2022-07-24 21:13:48.783  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 21:13:57.638  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 21:13:57.664  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-07-24 21:13:58.694  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.PrescriptionRepository. If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository.
+2022-07-24 21:13:58.786  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 991 ms. Found 2 JPA repository interfaces.
+2022-07-24 21:13:58.814  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-24 21:13:58.825  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-24 21:13:58.841  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AvailabilityRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 21:13:58.859  INFO 1 --- [           main] .RepositoryConfigurationExtensionSupport : Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.bookmyconsultation.appointmentservice.repository.AppointmentRepository. If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository.
+2022-07-24 21:13:58.870  INFO 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 44 ms. Found 1 MongoDB repository interfaces.
+2022-07-24 21:14:01.160  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b68415a3-d8e8-3f81-9eb3-9b40099ce61d
+2022-07-24 21:14:07.200  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-07-24 21:14:07.350  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 21:14:07.377  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 21:14:07.748  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 21:14:07.765  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18665 ms
+2022-07-24 21:14:12.806  INFO 1 --- [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.0"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "5.4.72-microsoft-standard-WSL2"}, "platform": "Java/Azul Systems, Inc./11.0.16+8-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@22bd2039], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@12db3386]}, clusterSettings={hosts=[ec2-3-232-57-4.compute-1.amazonaws.com:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@15bc339], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2022-07-24 21:14:13.236  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:105}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 21:14:13.237  INFO 1 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:104}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-24 21:14:13.270  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ec2-3-232-57-4.compute-1.amazonaws.com:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=316967900}
+2022-07-24 21:14:18.163  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(beans|beans/.*|caches|caches/.*|health|health/.*|info|info/.*|conditions|conditions/.*|configprops|configprops/.*|env|env/.*|loggers|loggers/.*|heapdump|heapdump/.*|threaddump|threaddump/.*|prometheus|prometheus/.*|metrics|metrics/.*|scheduledtasks|scheduledtasks/.*|mappings|mappings/.*|refresh|refresh/.*|features|features/.*)"
+2022-07-24 21:14:19.958  INFO 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-07-24 21:14:20.889  INFO 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.9.Final
+2022-07-24 21:14:22.899  INFO 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-07-24 21:14:24.410  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-24 21:14:29.980  INFO 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-24 21:14:30.219  INFO 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-07-24 21:14:32.579  INFO 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-07-24 21:14:32.603  INFO 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-07-24 21:14:34.541  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2022-07-24 21:14:34.577  WARN 1 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-07-24 21:14:35.083  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:kafkaTemplate with input parameters []
+2022-07-24 21:14:35.111  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:producerFactory with input parameters []
+2022-07-24 21:14:35.143  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:producerFactory with return value [org.springframework.kafka.core.DefaultKafkaProducerFactory@4fb57fb3] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:35.222  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaProducerConfiguration METHOD_NAME:kafkaTemplate with return value [org.springframework.kafka.core.KafkaTemplate@20cff21e] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:35.654  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with input parameters []
+2022-07-24 21:14:35.664  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with return value [org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@1d99ee1b] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:35.881  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Entering CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with input parameters []
+2022-07-24 21:14:35.935  INFO 1 --- [           main] c.b.a.aspect.LoggingAspect               : Exiting CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with return value [org.springframework.security.authentication.dao.DaoAuthenticationProvider@759a678a] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:36.213  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3cf55e0c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@ee96866, org.springframework.security.web.context.SecurityContextPersistenceFilter@d84b3a2, org.springframework.security.web.header.HeaderWriterFilter@19eea77c, org.springframework.security.web.authentication.logout.LogoutFilter@2b01c689, com.bookmyconsultation.appointmentservice.security.JWTAuthenticationFilter@4c04216f, com.bookmyconsultation.appointmentservice.security.JWTTokenVerifier@987a0bb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@221ca495, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7d47dfed, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1f949ab9, org.springframework.security.web.session.SessionManagementFilter@ac4915e, org.springframework.security.web.access.ExceptionTranslationFilter@64a1116a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@270d5060]
+2022-07-24 21:14:38.129  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 16 endpoint(s) beneath base path '/actuator'
+2022-07-24 21:14:38.269  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-07-24 21:14:38.291  INFO 1 --- [           main] c.b.a.AppointmentServiceApplication      : Started AppointmentServiceApplication in 54.119 seconds (JVM running for 57.574)
+2022-07-24 21:14:42.275  INFO 1 --- [nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-24 21:14:42.276  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-24 21:14:42.283  INFO 1 --- [nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-24 21:16:12.912  INFO 1 --- [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-07-24 21:16:12.933  INFO 1 --- [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...

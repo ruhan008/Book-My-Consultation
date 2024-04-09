@@ -1,0 +1,520 @@
+2022-07-24 20:24:30.582  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on ad676bb848ea with PID 1 (/app.jar started by root in /)
+2022-07-24 20:24:30.596  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 20:24:39.240  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-07-24 20:24:39.365  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 20:24:39.371  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 20:24:40.067  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 20:24:40.069  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9186 ms
+2022-07-24 20:24:43.181  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(beans|beans/.*|caches|caches/.*|health|health/.*|info|info/.*|conditions|conditions/.*|configprops|configprops/.*|env|env/.*|loggers|loggers/.*|heapdump|heapdump/.*|threaddump|threaddump/.*|prometheus|prometheus/.*|metrics|metrics/.*|scheduledtasks|scheduledtasks/.*|mappings|mappings/.*)"
+2022-07-24 20:24:45.402  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with input parameters []
+2022-07-24 20:24:45.471  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with input parameters []
+2022-07-24 20:24:45.538  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with return value [org.springframework.kafka.core.DefaultKafkaConsumerFactory@5467eea4] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:24:45.579  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with return value [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory@340b7ef6] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:24:45.972  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2022-07-24 20:24:50.789  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-24 20:24:51.710  INFO 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-service
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-07-24 20:24:53.698  INFO 1 --- [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2022-07-24 20:24:54.830  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'schema.registry.url' was supplied but isn't a known config.
+2022-07-24 20:24:54.833  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.user.info' was supplied but isn't a known config.
+2022-07-24 20:24:54.834  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.credentials.source' was supplied but isn't a known config.
+2022-07-24 20:24:54.855  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-07-24 20:24:54.857  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-07-24 20:24:54.860  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1658694294844
+2022-07-24 20:24:54.872  INFO 1 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Subscribed to topic(s): bmc-notification
+2022-07-24 20:24:55.174  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-07-24 20:24:55.309  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Started NotificationServiceApplication in 28.255 seconds (JVM running for 30.117)
+2022-07-24 20:25:00.456  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-0 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.466  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-5 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.470  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-4 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.474  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-1 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.476  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-2 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.478  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-3 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 20:25:00.492  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Cluster ID: lkc-220x51
+2022-07-24 20:25:00.508  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Discovered group coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null)
+2022-07-24 20:25:00.571  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 20:25:01.115  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: need to re-join with the given member-id
+2022-07-24 20:25:01.122  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 20:25:01.203  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully joined group with generation Generation{generationId=23, memberId='consumer-notification-service-1-b9088603-e5f0-403e-aa19-ff9a7fcde2b3', protocol='range'}
+2022-07-24 20:25:01.210  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Finished assignment for group at generation 23: {consumer-notification-service-1-b9088603-e5f0-403e-aa19-ff9a7fcde2b3=Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])}
+2022-07-24 20:25:01.309  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully synced group in generation Generation{generationId=23, memberId='consumer-notification-service-1-b9088603-e5f0-403e-aa19-ff9a7fcde2b3', protocol='range'}
+2022-07-24 20:25:01.322  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Notifying assignor about the new Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])
+2022-07-24 20:25:01.333  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Adding newly assigned partitions: bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 20:25:01.506  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-1 to the committed offset FetchPosition{offset=1, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b1-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 1 rack: 1)], epoch=0}}
+2022-07-24 20:25:01.510  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b3-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 3 rack: 0)], epoch=0}}
+2022-07-24 20:25:01.512  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-3 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b0-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 0 rack: 0)], epoch=0}}
+2022-07-24 20:25:01.513  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b2-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2 rack: 2)], epoch=0}}
+2022-07-24 20:25:01.515  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-5 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 5 rack: 2)], epoch=0}}
+2022-07-24 20:25:01.515  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-4 to the committed offset FetchPosition{offset=7, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b7-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 7 rack: 1)], epoch=0}}
+2022-07-24 20:25:01.620  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions assigned: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 20:25:09.082  INFO 1 --- [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-24 20:25:09.084  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-24 20:25:09.091  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-24 20:30:34.440  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Node -1 disconnected.
+2022-07-24 20:32:13.841  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 7, CreateTime = 1658694733206, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddac4987cc763b78a7267d","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:32:13.849  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorRegistration with message:{"id":"62ddac4987cc763b78a7267d","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]}
+2022-07-24 20:32:13.853  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 7, CreateTime = 1658694733206, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddac4987cc763b78a7267d","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:32:14.051  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Doctor registration received: Doctor(id=62ddac4987cc763b78a7267d, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Pending, approvedBy=null, approverComments=null, registrationDate=2022-07-24, verificationDate=null)
+2022-07-24 20:32:14.094  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:32:14.095  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:36:35.741  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 8, CreateTime = 1658694995690, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddad5387cc763b78a7267e","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:36:35.743  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorRegistration with message:{"id":"62ddad5387cc763b78a7267e","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]}
+2022-07-24 20:36:35.744  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 8, CreateTime = 1658694995690, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddad5387cc763b78a7267e","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:36:35.745  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Doctor registration received: Doctor(id=62ddad5387cc763b78a7267e, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Pending, approvedBy=null, approverComments=null, registrationDate=2022-07-24, verificationDate=null)
+2022-07-24 20:36:35.746  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:36:35.747  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:42:35.162  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 9, CreateTime = 1658695355109, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:42:35.164  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorRegistration with message:{"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]}
+2022-07-24 20:42:35.165  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 9, CreateTime = 1658695355109, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 20:42:35.167  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Doctor registration received: Doctor(id=62ddaeba87cc763b78a7267f, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Pending, approvedBy=null, approverComments=null, registrationDate=2022-07-24, verificationDate=null)
+2022-07-24 20:42:35.169  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:42:35.169  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 20:45:00.541  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 1, CreateTime = 1658695498859, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:45:00.542  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorApprovalEvent with message:{"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]}
+2022-07-24 20:45:00.543  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 1, CreateTime = 1658695498859, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:45:00.544  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Sending email for DoctorApprovalEvent to Sadiq Umar
+2022-07-24 20:45:00.545  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with input parameters [Doctor(id=62ddaeba87cc763b78a7267f, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Active, approvedBy=Ruhan, approverComments=Documents look good, registrationDate=2022-07-24, verificationDate=2022-07-24), DoctorApprovalEvent]
+2022-07-24 20:45:05.909  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EmailService               : Email sent to id: ruhan008@gmail.com successfully
+2022-07-24 20:45:06.134  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with return value [null] and execution time of 0 minutes and 5 seconds
+2022-07-24 20:45:06.135  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 5 seconds
+2022-07-24 20:45:06.136  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 5 seconds
+2022-07-24 20:46:44.525  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 2, CreateTime = 1658695604475, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:46:44.526  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorApprovalEvent with message:{"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]}
+2022-07-24 20:46:44.527  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 2, CreateTime = 1658695604475, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:46:44.528  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Sending email for DoctorApprovalEvent to Sadiq Umar
+2022-07-24 20:46:44.528  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with input parameters [Doctor(id=62ddaeba87cc763b78a7267f, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Active, approvedBy=Ruhan, approverComments=Documents look good, registrationDate=2022-07-24, verificationDate=2022-07-24), DoctorApprovalEvent]
+2022-07-24 20:46:48.490  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EmailService               : Email sent to id: ruhan008@gmail.com successfully
+2022-07-24 20:46:48.724  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:46:48.726  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:46:48.726  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:47:20.689  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 3, CreateTime = 1658695640640, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:47:20.692  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorApprovalEvent with message:{"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]}
+2022-07-24 20:47:20.694  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 1, leaderEpoch = 0, offset = 3, CreateTime = 1658695640640, serialized key size = 19, serialized value size = 337, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorApprovalEvent, value = {"id":"62ddaeba87cc763b78a7267f","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Active","approvedBy":"Ruhan","approverComments":"Documents look good","registrationDate":[2022,7,24],"verificationDate":[2022,7,24]})]
+2022-07-24 20:47:20.695  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Sending email for DoctorApprovalEvent to Sadiq Umar
+2022-07-24 20:47:20.697  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with input parameters [Doctor(id=62ddaeba87cc763b78a7267f, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Active, approvedBy=Ruhan, approverComments=Documents look good, registrationDate=2022-07-24, verificationDate=2022-07-24), DoctorApprovalEvent]
+2022-07-24 20:47:24.544  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EmailService               : Email sent to id: ruhan008@gmail.com successfully
+2022-07-24 20:47:24.778  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EmailService METHOD_NAME:sendEmailForDoctorEvent with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:47:24.779  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:47:24.780  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 4 seconds
+2022-07-24 20:57:54.715  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Revoke previously assigned partitions bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 20:57:54.717  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions revoked: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 20:57:54.718  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Member consumer-notification-service-1-b9088603-e5f0-403e-aa19-ff9a7fcde2b3 sending LeaveGroup request to coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null) due to the consumer unsubscribed from all topics
+2022-07-24 20:57:54.720  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 20:57:54.720  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 20:57:54.721  INFO 1 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Unsubscribed all topics or patterns and assigned partitions
+2022-07-24 20:57:54.723  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 20:57:54.724  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 20:57:54.767  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-07-24 20:57:54.768  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-07-24 20:57:54.769  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-07-24 20:57:54.780  INFO 1 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-notification-service-1 unregistered
+2022-07-24 20:57:54.782  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: Consumer stopped
+2022-07-24 21:10:28.476  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on ad676bb848ea with PID 1 (/app.jar started by root in /)
+2022-07-24 21:10:28.505  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 21:10:39.116  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-07-24 21:10:39.219  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 21:10:39.221  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 21:10:39.885  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 21:10:39.904  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11054 ms
+2022-07-24 21:10:43.818  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(beans|beans/.*|caches|caches/.*|health|health/.*|info|info/.*|conditions|conditions/.*|configprops|configprops/.*|env|env/.*|loggers|loggers/.*|heapdump|heapdump/.*|threaddump|threaddump/.*|prometheus|prometheus/.*|metrics|metrics/.*|scheduledtasks|scheduledtasks/.*|mappings|mappings/.*)"
+2022-07-24 21:10:46.638  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with input parameters []
+2022-07-24 21:10:46.797  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with input parameters []
+2022-07-24 21:10:46.895  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with return value [org.springframework.kafka.core.DefaultKafkaConsumerFactory@53093491] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:10:46.925  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with return value [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory@73877e19] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:10:47.434  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2022-07-24 21:10:53.787  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-24 21:10:55.036  INFO 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-service
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-07-24 21:10:58.233  INFO 1 --- [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2022-07-24 21:10:59.474  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'schema.registry.url' was supplied but isn't a known config.
+2022-07-24 21:10:59.475  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.user.info' was supplied but isn't a known config.
+2022-07-24 21:10:59.481  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.credentials.source' was supplied but isn't a known config.
+2022-07-24 21:10:59.497  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-07-24 21:10:59.509  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-07-24 21:10:59.511  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1658697059486
+2022-07-24 21:10:59.549  INFO 1 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Subscribed to topic(s): bmc-notification
+2022-07-24 21:11:00.252  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-07-24 21:11:00.436  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Started NotificationServiceApplication in 35.719 seconds (JVM running for 37.64)
+2022-07-24 21:11:06.461  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-0 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.470  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-5 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.479  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-4 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.480  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-1 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.482  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-2 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.484  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-3 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:11:06.494  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Cluster ID: lkc-220x51
+2022-07-24 21:11:06.499  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Discovered group coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null)
+2022-07-24 21:11:06.583  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 21:11:07.064  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: need to re-join with the given member-id
+2022-07-24 21:11:07.068  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 21:11:07.124  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully joined group with generation Generation{generationId=25, memberId='consumer-notification-service-1-74ed9df4-9cc9-4be0-bfc0-7d3cfe5d8180', protocol='range'}
+2022-07-24 21:11:07.131  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Finished assignment for group at generation 25: {consumer-notification-service-1-74ed9df4-9cc9-4be0-bfc0-7d3cfe5d8180=Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])}
+2022-07-24 21:11:07.200  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully synced group in generation Generation{generationId=25, memberId='consumer-notification-service-1-74ed9df4-9cc9-4be0-bfc0-7d3cfe5d8180', protocol='range'}
+2022-07-24 21:11:07.206  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Notifying assignor about the new Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])
+2022-07-24 21:11:07.221  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Adding newly assigned partitions: bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 21:11:07.377  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-1 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b1-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 1 rack: 1)], epoch=0}}
+2022-07-24 21:11:07.378  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b3-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 3 rack: 0)], epoch=0}}
+2022-07-24 21:11:07.380  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-3 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b0-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 0 rack: 0)], epoch=0}}
+2022-07-24 21:11:07.383  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b2-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2 rack: 2)], epoch=0}}
+2022-07-24 21:11:07.385  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-5 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 5 rack: 2)], epoch=0}}
+2022-07-24 21:11:07.393  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-4 to the committed offset FetchPosition{offset=10, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b7-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 7 rack: 1)], epoch=0}}
+2022-07-24 21:11:07.397  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions assigned: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 21:11:09.690  INFO 1 --- [nio-8085-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-24 21:11:09.769  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-24 21:11:09.850  INFO 1 --- [nio-8085-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-24 21:13:15.698  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Revoke previously assigned partitions bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 21:13:15.700  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions revoked: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 21:13:15.701  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Member consumer-notification-service-1-74ed9df4-9cc9-4be0-bfc0-7d3cfe5d8180 sending LeaveGroup request to coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null) due to the consumer unsubscribed from all topics
+2022-07-24 21:13:15.703  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 21:13:15.704  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 21:13:15.704  INFO 1 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Unsubscribed all topics or patterns and assigned partitions
+2022-07-24 21:13:15.706  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 21:13:15.707  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 21:13:15.750  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-07-24 21:13:15.751  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-07-24 21:13:15.752  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-07-24 21:13:15.766  INFO 1 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-notification-service-1 unregistered
+2022-07-24 21:13:15.767  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: Consumer stopped
+2022-07-24 21:13:41.958  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Starting NotificationServiceApplication v0.0.1-SNAPSHOT using Java 11.0.16 on ad676bb848ea with PID 1 (/app.jar started by root in /)
+2022-07-24 21:13:41.986  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : No active profile set, falling back to 1 default profile: "default"
+2022-07-24 21:13:52.083  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-07-24 21:13:52.152  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-24 21:13:52.155  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-24 21:13:52.674  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-24 21:13:52.677  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10362 ms
+2022-07-24 21:13:57.326  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating FilterRegistrationBean bean with TracingFilter mapped to [], skip pattern is "/api-docs.*|/swagger.*|.*\.png|.*\.css|.*\.js|.*\.html|/favicon.ico|/hystrix.stream|/actuator/(beans|beans/.*|caches|caches/.*|health|health/.*|info|info/.*|conditions|conditions/.*|configprops|configprops/.*|env|env/.*|loggers|loggers/.*|heapdump|heapdump/.*|threaddump|threaddump/.*|prometheus|prometheus/.*|metrics|metrics/.*|scheduledtasks|scheduledtasks/.*|mappings|mappings/.*)"
+2022-07-24 21:14:00.194  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with input parameters []
+2022-07-24 21:14:00.291  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with input parameters []
+2022-07-24 21:14:00.379  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with return value [org.springframework.kafka.core.DefaultKafkaConsumerFactory@57b9e423] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:00.454  INFO 1 --- [           main] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with return value [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory@3e83c18] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:14:00.901  INFO 1 --- [           main] o.c.s.w.s.ServerTracingAutoConfiguration : Creating WebMvcConfigurer bean with class io.opentracing.contrib.spring.web.interceptor.TracingHandlerInterceptor
+2022-07-24 21:14:05.721  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2022-07-24 21:14:06.600  INFO 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-notification-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = notification-service
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-07-24 21:14:07.259  INFO 1 --- [           main] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2022-07-24 21:14:08.964  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'schema.registry.url' was supplied but isn't a known config.
+2022-07-24 21:14:08.984  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.user.info' was supplied but isn't a known config.
+2022-07-24 21:14:09.013  WARN 1 --- [           main] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.credentials.source' was supplied but isn't a known config.
+2022-07-24 21:14:09.031  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-07-24 21:14:09.045  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-07-24 21:14:09.049  INFO 1 --- [           main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1658697249018
+2022-07-24 21:14:09.114  INFO 1 --- [           main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Subscribed to topic(s): bmc-notification
+2022-07-24 21:14:09.551  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-07-24 21:14:09.863  INFO 1 --- [           main] c.b.n.NotificationServiceApplication     : Started NotificationServiceApplication in 31.088 seconds (JVM running for 32.73)
+2022-07-24 21:14:13.971  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-0 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:13.984  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-5 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:13.986  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-4 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:13.991  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-1 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:13.992  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-2 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:13.993  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting the last seen epoch of partition bmc-notification-3 to 0 since the associated topicId changed from null to rfXkLRgQTJGh-S3y8oXkkQ
+2022-07-24 21:14:14.015  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Cluster ID: lkc-220x51
+2022-07-24 21:14:14.023  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Discovered group coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null)
+2022-07-24 21:14:14.057  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 21:14:14.498  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: need to re-join with the given member-id
+2022-07-24 21:14:14.503  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] (Re-)joining group
+2022-07-24 21:14:14.553  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully joined group with generation Generation{generationId=27, memberId='consumer-notification-service-1-90442c05-9aa3-43eb-b495-b555e4c2181c', protocol='range'}
+2022-07-24 21:14:14.560  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Finished assignment for group at generation 27: {consumer-notification-service-1-90442c05-9aa3-43eb-b495-b555e4c2181c=Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])}
+2022-07-24 21:14:14.638  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Successfully synced group in generation Generation{generationId=27, memberId='consumer-notification-service-1-90442c05-9aa3-43eb-b495-b555e4c2181c', protocol='range'}
+2022-07-24 21:14:14.640  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Notifying assignor about the new Assignment(partitions=[bmc-notification-0, bmc-notification-1, bmc-notification-2, bmc-notification-3, bmc-notification-4, bmc-notification-5])
+2022-07-24 21:14:14.691  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Adding newly assigned partitions: bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 21:14:14.838  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-1 to the committed offset FetchPosition{offset=4, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b1-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 1 rack: 1)], epoch=0}}
+2022-07-24 21:14:14.840  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-0 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b3-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 3 rack: 0)], epoch=0}}
+2022-07-24 21:14:14.845  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-3 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b0-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 0 rack: 0)], epoch=0}}
+2022-07-24 21:14:14.847  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-2 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b2-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2 rack: 2)], epoch=0}}
+2022-07-24 21:14:14.873  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-5 to the committed offset FetchPosition{offset=0, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 5 rack: 2)], epoch=0}}
+2022-07-24 21:14:14.876  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Setting offset for partition bmc-notification-4 to the committed offset FetchPosition{offset=10, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[b7-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 7 rack: 1)], epoch=0}}
+2022-07-24 21:14:14.997  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions assigned: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 21:14:24.181  INFO 1 --- [nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-24 21:14:24.189  INFO 1 --- [nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-24 21:14:24.213  INFO 1 --- [nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2022-07-24 21:15:50.900  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 10, CreateTime = 1658697350144, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddb6846fbace0579e3c8d5","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 21:15:50.910  INFO 1 --- [ntainer#0-0-C-1] c.b.n.consumer.KafkaConsumer             : Received event:DoctorRegistration with message:{"id":"62ddb6846fbace0579e3c8d5","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]}
+2022-07-24 21:15:50.911  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Entering CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with input parameters [ConsumerRecord(topic = bmc-notification, partition = 4, leaderEpoch = 0, offset = 10, CreateTime = 1658697350144, serialized key size = 18, serialized value size = 245, headers = RecordHeaders(headers = [RecordHeader(key = __TypeId__, value = [99, 111, 109, 46, 98, 111, 111, 107, 109, 121, 99, 111, 110, 115, 117, 108, 116, 97, 116, 105, 111, 110, 46, 100, 111, 99, 116, 111, 114, 115, 101, 114, 118, 105, 99, 101, 46, 109, 111, 100, 101, 108, 46, 68, 111, 99, 116, 111, 114])], isReadOnly = false), key = DoctorRegistration, value = {"id":"62ddb6846fbace0579e3c8d5","firstName":"Sadiq","lastName":"Umar","speciality":"GENERAL_PHYSICIAN","dob":"1965-10-25","mobile":"7259110977","emailId":"ruhan008@gmail.com","pan":"KKAPS6132M","status":"Pending","registrationDate":[2022,7,24]})]
+2022-07-24 21:15:51.014  INFO 1 --- [ntainer#0-0-C-1] c.b.n.service.EventProcessorServiceImpl  : Doctor registration received: Doctor(id=62ddb6846fbace0579e3c8d5, firstName=Sadiq, lastName=Umar, speciality=GENERAL_PHYSICIAN, dob=1965-10-25, mobile=7259110977, emailId=ruhan008@gmail.com, pan=KKAPS6132M, status=Pending, approvedBy=null, approverComments=null, registrationDate=2022-07-24, verificationDate=null)
+2022-07-24 21:15:51.041  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:EventProcessorServiceImpl METHOD_NAME:processIncomingMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:15:51.042  INFO 1 --- [ntainer#0-0-C-1] c.b.n.aspect.LoggingAspect               : Exiting CLASS_NAME:KafkaConsumer METHOD_NAME:OnMessage with return value [null] and execution time of 0 minutes and 0 seconds
+2022-07-24 21:16:24.047  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Revoke previously assigned partitions bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0
+2022-07-24 21:16:24.049  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: partitions revoked: [bmc-notification-3, bmc-notification-2, bmc-notification-5, bmc-notification-4, bmc-notification-1, bmc-notification-0]
+2022-07-24 21:16:24.050  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Member consumer-notification-service-1-90442c05-9aa3-43eb-b495-b555e4c2181c sending LeaveGroup request to coordinator b5-pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 (id: 2147483642 rack: null) due to the consumer unsubscribed from all topics
+2022-07-24 21:16:24.052  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 21:16:24.053  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 21:16:24.053  INFO 1 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Unsubscribed all topics or patterns and assigned partitions
+2022-07-24 21:16:24.055  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-24 21:16:24.055  INFO 1 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-notification-service-1, groupId=notification-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-24 21:16:24.095  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-07-24 21:16:24.096  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-07-24 21:16:24.097  INFO 1 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-07-24 21:16:24.109  INFO 1 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-notification-service-1 unregistered
+2022-07-24 21:16:24.111  INFO 1 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : notification-service: Consumer stopped

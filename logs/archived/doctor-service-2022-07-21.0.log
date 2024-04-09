@@ -1,0 +1,146 @@
+2022-07-21 13:02:09.574  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.d.DoctorServiceApplication           : Starting DoctorServiceApplication using Java 11.0.15 on DESKTOP-NRN4GVG with PID 13036 (D:\My Application Suite\Upgrad Projects\BookMyConsultation\doctor-service\target\classes started by Ruhan in D:\Other-IntelliJ-Workspaces\Upgrad-Capstone-Project)
+2022-07-21 13:02:09.576  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.d.DoctorServiceApplication           : No active profile set, falling back to 1 default profile: "default"
+2022-07-21 13:02:09.635  INFO [doctor-service,,] 13036 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-07-21 13:02:09.637  INFO [doctor-service,,] 13036 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-07-21 13:02:11.529  INFO [doctor-service,,] 13036 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-07-21 13:02:11.777  INFO [doctor-service,,] 13036 --- [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 241 ms. Found 2 MongoDB repository interfaces.
+2022-07-21 13:02:12.270  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=e8803add-43bf-35d7-b775-05a04e52a4d7
+2022-07-21 13:02:14.202  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-07-21 13:02:14.217  INFO [doctor-service,,] 13036 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-21 13:02:14.218  INFO [doctor-service,,] 13036 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.63]
+2022-07-21 13:02:15.384  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-21 13:02:15.385  INFO [doctor-service,,] 13036 --- [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5747 ms
+2022-07-21 13:02:16.693  INFO [doctor-service,,] 13036 --- [  restartedMain] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.0"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/11.0.15+8-LTS-149"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsCommandListener@49835f7b, org.springframework.cloud.sleuth.instrument.mongodb.TraceMongoCommandListener@54d33d3b], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4924caf9]}, clusterSettings={hosts=[ec2-3-232-57-4.compute-1.amazonaws.com:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[io.micrometer.core.instrument.binder.mongodb.MongoMetricsConnectionPoolListener@be79d79], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=org.springframework.cloud.sleuth.instrument.mongodb.TraceSynchronousMongoClientSettingsBuilderCustomizer$$Lambda$903/0x000000080071e040@584c73f9}
+2022-07-21 13:02:16.791  WARN [doctor-service,,] 13036 --- [  restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-07-21 13:02:16.932  WARN [doctor-service,,] 13036 --- [  restartedMain] o.s.data.convert.CustomConversions       : Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-07-21 13:02:17.195  INFO [doctor-service,,] 13036 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:23}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-21 13:02:17.195  INFO [doctor-service,,] 13036 --- [onaws.com:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:24}] to ec2-3-232-57-4.compute-1.amazonaws.com:27017
+2022-07-21 13:02:17.199  INFO [doctor-service,,] 13036 --- [onaws.com:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ec2-3-232-57-4.compute-1.amazonaws.com:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=279194300}
+2022-07-21 13:02:17.579  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-07-21 13:02:17.644  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:ProducerConfig METHOD_NAME:kafkaTemplate with input parameters []
+2022-07-21 13:02:17.665  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:ProducerConfig METHOD_NAME:producerFactory with input parameters []
+2022-07-21 13:02:17.676  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:ProducerConfig METHOD_NAME:producerFactory with return value [org.springframework.kafka.core.DefaultKafkaProducerFactory@714f662c] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:17.712  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:ProducerConfig METHOD_NAME:kafkaTemplate with return value [org.springframework.kafka.core.KafkaTemplate@f5c07f0] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:18.640  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with input parameters []
+2022-07-21 13:02:18.652  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with input parameters []
+2022-07-21 13:02:18.654  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:consumerFactory with return value [org.springframework.kafka.core.DefaultKafkaConsumerFactory@17913a8] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:18.668  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:KafkaConsumerConfiguration METHOD_NAME:concurrentKafkaListenerContainerFactory with return value [org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory@36142b4e] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:19.321  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with input parameters []
+2022-07-21 13:02:19.326  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:PasswordConfig METHOD_NAME:passwordEncoder with return value [org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder@68cfb75] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:19.547  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Entering CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with input parameters []
+2022-07-21 13:02:19.569  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.doctorservice.aspect.LoggingAspect   : Exiting CLASS_NAME:ApplicationSecurityConfiguration METHOD_NAME:daoAuthenticationProvider with return value [org.springframework.security.authentication.dao.DaoAuthenticationProvider@6e7b3214] and execution time of 0 minutes and 0 seconds
+2022-07-21 13:02:19.697  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@a2cad99, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11916b0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@45dbaf9d, org.springframework.security.web.header.HeaderWriterFilter@5e25c131, org.springframework.security.web.authentication.logout.LogoutFilter@1f8faafc, com.bookmyconsultation.doctorservice.security.JWTAuthenticationFilter@1e1793b, com.bookmyconsultation.doctorservice.security.JWTTokenVerifier@34136bfc, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@77aed869, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@326984f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5bbc4882, org.springframework.security.web.session.SessionManagementFilter@77a3e00a, org.springframework.security.web.access.ExceptionTranslationFilter@189f7be1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@46f413aa]
+2022-07-21 13:02:21.222  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoint(s) beneath base path '/actuator'
+2022-07-21 13:02:21.389  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-doctor-service-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = doctor-service
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = [hidden]
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = PLAIN
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = SASL_SSL
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2022-07-21 13:02:21.488  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.k.c.s.authenticator.AbstractLogin    : Successfully logged in.
+2022-07-21 13:02:21.585  WARN [doctor-service,,] 13036 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'schema.registry.url' was supplied but isn't a known config.
+2022-07-21 13:02:21.585  WARN [doctor-service,,] 13036 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.user.info' was supplied but isn't a known config.
+2022-07-21 13:02:21.585  WARN [doctor-service,,] 13036 --- [  restartedMain] o.a.k.clients.consumer.ConsumerConfig    : The configuration 'basic.auth.credentials.source' was supplied but isn't a known config.
+2022-07-21 13:02:21.587  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.1.1
+2022-07-21 13:02:21.587  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 97671528ba54a138
+2022-07-21 13:02:21.587  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1658388741585
+2022-07-21 13:02:21.591  INFO [doctor-service,,] 13036 --- [  restartedMain] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Subscribed to topic(s): bmc-doctor
+2022-07-21 13:02:21.644  INFO [doctor-service,,] 13036 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-07-21 13:02:21.940  INFO [doctor-service,,] 13036 --- [  restartedMain] c.b.d.DoctorServiceApplication           : Started DoctorServiceApplication in 13.274 seconds (JVM running for 15.217)
+2022-07-21 13:02:22.250  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-21 13:02:22.250  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-21 13:02:22.250  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Unsubscribed all topics or patterns and assigned partitions
+2022-07-21 13:02:22.251  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Resetting generation due to: consumer pro-actively leaving the group
+2022-07-21 13:02:22.251  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-doctor-service-1, groupId=doctor-service] Request joining group due to: consumer pro-actively leaving the group
+2022-07-21 13:02:22.252  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics scheduler closed
+2022-07-21 13:02:22.252  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2022-07-21 13:02:22.252  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] org.apache.kafka.common.metrics.Metrics  : Metrics reporters closed
+2022-07-21 13:02:22.261  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-doctor-service-1 unregistered
+2022-07-21 13:02:22.263  INFO [doctor-service,,] 13036 --- [ntainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : doctor-service: Consumer stopped

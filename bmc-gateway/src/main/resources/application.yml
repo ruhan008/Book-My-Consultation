@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: bmc-gateway
+  cloud:
+    gateway:
+      routes:
+        - id: doctor-service
+          uri: http://${DOCTOR_SERVICE_HOST:localhost}:8081
+          predicates:
+            - Path=/doctor-service/**
+          filters:
+            - StripPrefix=1
+        - id: appointment-service
+          uri: http://${APPOINTMENT_SERVICE_HOST:localhost}:8082
+          predicates:
+            - Path=/appointment-service/**
+          filters:
+            - StripPrefix=1
+        - id: user-service
+          uri: http://${USER_SERVICE_HOST:localhost}:8083
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - StripPrefix=1
+        - id: rating-service
+          uri: http://${RATING_SERVICE_HOST:localhost}:8084
+          predicates:
+            - Path=/rating-service/**
+          filters:
+            - StripPrefix=1
+        - id: payment-service
+          uri: http://${PAYMENT_SERVICE_HOST:localhost}:8086
+          predicates:
+            - Path=/payment-service/**
+          filters:
+            - StripPrefix=1
+
+server:
+  port: 9191

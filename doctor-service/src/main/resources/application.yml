@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: doctor-service
+  data:
+    mongodb:
+      uri: mongodb+srv://ruhan:cloudMongo9012@cluster0.gqnj2ui.mongodb.net/?retryWrites=true&w=majority # Configure before run
+      port: 27017
+      database: doctor-service
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  producer:
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run
+    topic: bmc-notification
+  consumer:
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run
+    topic: bmc-doctor
+    group-id: doctor-service

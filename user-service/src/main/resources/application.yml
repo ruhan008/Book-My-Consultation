@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      host: ec2-3-232-57-4.compute-1.amazonaws.com # Configure before run
+      port: 27017
+      database: user-service
+
+server:
+  port: 8083
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  producer:
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run
+    topic: bmc-notification

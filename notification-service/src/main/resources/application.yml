@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: notification-service
+
+server:
+  port: 8085
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  consumer:
+    topic: bmc-notification
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run
+    group-id: notification-service
+
+from-email: ruhan008@gmail.com # Configure before run

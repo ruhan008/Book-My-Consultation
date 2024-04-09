@@ -1,0 +1,17 @@
+{
+	"ulid": "01G950NPQYF4RQCGP1B67M0SR2",
+	"minTime": 1659088801650,
+	"maxTime": 1659096000000,
+	"stats": {
+		"numSamples": 272160,
+		"numSeries": 567,
+		"numChunks": 2268
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01G950NPQYF4RQCGP1B67M0SR2"
+		]
+	},
+	"version": 1
+}

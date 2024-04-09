@@ -1,0 +1,180 @@
+2022-07-27 07:24:02.348  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:883)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:24:22.362  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:24:32.366  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:883)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:25:22.386  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:25:32.391  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:883)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:25:52.407  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:26:02.415  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:883)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 07:27:52.476  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:217)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:75)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.UnknownHostException: ec2-3-232-57-4.compute-1.amazonaws.com: Name does not resolve
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1529)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1519)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1378)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:209)
+	... 6 common frames omitted
+
+2022-07-27 08:06:53.660  INFO 1 --- [onaws.com:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ec2-3-232-57-4.compute-1.amazonaws.com:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:180)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:157)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.SocketTimeoutException: connect timed out
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:412)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:255)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:237)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.base/java.net.Socket.connect(Socket.java:615)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:107)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 4 common frames omitted
+

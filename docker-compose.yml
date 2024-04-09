@@ -1,0 +1,137 @@
+version: '3.3'
+# Define services
+services:
+  doctor-service:
+# Configuration for building the docker image for the doctor service
+    build: ./doctor-service
+    container_name: doctor-service
+    image: ruhan008/doctor-service:0.1
+    ports:
+    - "8081:8081" # Forward the exposed port 8081 to port 8081 on the host machine
+    volumes:
+    - ./logs:/logs
+    depends_on:
+      - bmc-gateway # This service depends on bmc-gateway and notification-service. Start them first.
+      - notification-service
+  appointment-service:
+    # Configuration for building the docker image for the appointment service
+    build: ./appointment-service
+    container_name: appointment-service
+    image: ruhan008/appointment-service:0.1
+    ports:
+    - "8082:8082" # Forward the exposed port 8082 to port 8082 on the host machine
+    volumes:
+    - ./logs:/logs
+    environment:
+      DOCTOR_SERVICE_HOST: doctor-service
+      USER_SERVICE_HOST: user-service
+    depends_on:
+    - bmc-gateway # This service depends on bmc-gateway, notification-service, doctor-service, user-service. Start them first.
+    - notification-service
+    - doctor-service
+    - user-service
+  user-service:
+    # Configuration for building the docker image for the user service
+    build: ./user-service
+    container_name: user-service
+    image: ruhan008/user-service:0.1
+    ports:
+    - "8083:8083" # Forward the exposed port 8083 to port 8083 on the host machine
+    volumes:
+    - ./logs:/logs
+    depends_on:
+    - bmc-gateway # This service depends on bmc-gateway, notification-service. Start them first.
+    - notification-service
+  rating-service:
+    # Configuration for building the docker image for the rating service
+    build: ./rating-service
+    container_name: rating-service
+    image: ruhan008/rating-service:0.1
+    ports:
+    - "8084:8084" # Forward the exposed port 8084 to port 8084 on the host machine
+    volumes:
+    - ./logs:/logs
+    depends_on:
+    - bmc-gateway # This service depends on bmc-gateway, notification-service. Start them first.
+    - notification-service
+  notification-service:
+    # Configuration for building the docker image for the user service
+    build: ./notification-service
+    container_name: notification-service
+    image: ruhan008/notification-service:0.1
+    ports:
+    - "8085:8085" # Forward the exposed port 8085 to port 8085 on the host machine
+    volumes:
+    - ./logs:/logs
+  payment-service:
+    # Configuration for building the docker image for the payment service
+    build: ./payment-service
+    container_name: payment-service
+    image: ruhan008/payment-service:0.1
+    ports:
+      - "8086:8086" # Forward the exposed port 8086 to port 8086 on the host machine
+    volumes:
+    - ./logs:/logs
+    environment:
+      APPOINTMENT_SERVICE_HOST: appointment-service
+    depends_on:
+      - bmc-gateway # This service depends on bmc-gateway, notification-service, appointment-service. Start them first.
+      - notification-service
+      - appointment-service
+  bmc-gateway:
+    # Configuration for building the docker image for the bmc gateway
+    build: ./bmc-gateway
+    container_name: bmc-gateway
+    image: ruhan008/bmc-gateway:0.1
+    ports:
+    - "9191:9191" # Forward the exposed port 9191 to port 9191 on the host machine
+    environment:
+      DOCTOR_SERVICE_HOST: doctor-service
+      APPOINTMENT_SERVICE_HOST: appointment-service
+      USER_SERVICE_HOST: user-service
+      RATING_SERVICE_HOST: rating-service
+      PAYMENT_SERVICE_HOST: payment-service
+  loki:
+    image: grafana/loki:latest
+    container_name: loki
+    ports:
+      - 3100:3100
+    command: -config.file=/etc/loki/local-config.yaml
+
+  promtail:
+    image: grafana/promtail:latest
+    container_name: promtail
+    volumes:
+      - ./logs:/logs
+      - ./data/loki/config:/etc/loki
+    command: -config.file=/etc/loki/loki-promtail-conf.yml
+
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./data/prometheus/config:/etc/prometheus/
+      - ./data/prometheus/data:/prometheus
+    ports:
+      - 9090:9090
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.36
+    container_name: jaeger
+    ports:
+      - "6831:6831/udp"
+      - "16686:16686"
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    volumes:
+      - ./data/grafana:/var/lib/grafana
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=password
+      - GF_USERS_ALLOW_SIGN_UP=false
+    ports:
+      - 3000:3000
+networks:
+  book-my-consultation:
+    driver: bridge

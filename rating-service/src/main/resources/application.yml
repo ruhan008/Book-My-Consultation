@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: rating-service
+  data:
+    mongodb:
+      host: ec2-3-232-57-4.compute-1.amazonaws.com # Configure before run
+      port: 27017
+      database: rating-service
+
+server:
+  port: 8084
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  producer:
+    topic: bmc-doctor
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run

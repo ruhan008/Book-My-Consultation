@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+  external_labels:
+    monitor: bmc-monitor
+
+scrape_configs:
+  - job_name: bmc-app
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: [ doctor-service:8081, appointment-service:8082, user-service:8083, rating-service:8084, notification-service:8085, payment-service:8086]

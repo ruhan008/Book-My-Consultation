@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: payment-service
+  data:
+    mongodb:
+      host: ec2-3-232-57-4.compute-1.amazonaws.com # Configure before run
+      port: 27017
+      database: payment-service
+
+server:
+  port: 8086
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  producer:
+    topic: bmc-notification
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run

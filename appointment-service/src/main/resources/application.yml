@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: appointment-service
+  data:
+    mongodb:
+      host: ec2-3-232-57-4.compute-1.amazonaws.com # Configure before run
+      port: 27017
+      database: appointment-service
+  datasource:
+    url: jdbc:mysql://bookmyconsultation.cqelf5aheptp.us-east-1.rds.amazonaws.com/appointment_service # Configure before run
+    username: admin # Configure before run
+    password: bmc-1234 # Configure before run
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+
+server:
+  port: 8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+kafka:
+  producer:
+    bootstrap-servers: pkc-xrnwx.asia-south2.gcp.confluent.cloud:9092 # Configure before run
+    topic: bmc-notification
